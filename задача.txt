@@ -1,0 +1,23 @@
+Самое сложное позади, но результаты нашего поисковика выглядят бесполезно и не очень красиво.
+Добавьте кликабельную ссылку на репозиторий, а под ней разместите краткое описание. Допишите функцию шаблонизации результатов поиска template.
+Использованное ранее название репозитория поместите в тэг <a class="search__finding-link">${item.full_name}</a> вместо тэга <p class="search__finding-name">${item.full_name}</p>. Нажатие на ссылку должно открывать новую вкладку.
+Вы уже знакомы с набором данных. Используя их, вы сможете сделать работающую ссылку на репозиторий и дополнить результаты кратким описанием. Вот что возвращается при успешном запросе поиска для каждого найденного репозитория:
+{
+    total_count: 1748551
+    incomplete_results: false
+    items: [
+        {
+            id: 10270250,
+            name: "react",
+            full_name: "facebook/react",
+            html_url: "https://github.com/facebook/react",
+            description: "A declarative, efficient, and flexible JavaScript library for building user interfaces.",
+            stargazers_count: 160193,
+            language: "JavaScript",
+            ...
+        },
+        ...
+    ]
+} 
+Поле описание (description) оберните тэгом <span class="search__finding-description"></span>.
+Для решения этой задачи вам пригодятся поля: full_name, html_url и description.
